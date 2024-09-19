@@ -1,0 +1,35 @@
+.navbar-links li {
+    cursor: pointer;
+    
+    position: relative;
+}
+
+.navbar-links li::after{
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(129, 129, 129, 0.575);
+    height: 2px;
+    width: 0%;
+    transition: width 0.65s ease-in-out;
+}
+
+.navbar-links li:hover::after{
+    width: 50%;
+}
+
+@media (max-width: 768px) {
+    .navbar-links li::after{
+        position: absolute;
+        content: "";
+        bottom: 0;
+        left: 0;
+        transform: unset;
+        background-color: rgba(129, 129, 129, 0.575);
+        height: 2px;
+        width: 0%;
+        transition: width 0.65s ease-in-out;
+    }
+}

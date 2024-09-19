@@ -1,0 +1,31 @@
+.homepage__header{
+    background-color: grey;
+    display: grid;
+    place-items: center;
+    margin-top: 1rem;
+    color: white;
+    background: url("/assets/home-hero.jpg") no-repeat center;
+    background-size: cover;
+    position: relative;
+}
+
+.homepage__header::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.405);
+
+    z-index: 1;
+}
+
+.homepage__header * {
+    z-index: 2;
+}
+
+.homepage__header p {
+    margin-top: .8rem;
+    letter-spacing: .2rem;
+}
